@@ -45,7 +45,7 @@ def editPost():
         # get the post details from the db
         post = dict(db.posts.find_one({"_id":ObjectId(postId)}))
 
-        # direct to edit post page
+        #direct to edit post page
         return render_template('edit-post.html', post=post)
 
     elif request.method == "POST":
